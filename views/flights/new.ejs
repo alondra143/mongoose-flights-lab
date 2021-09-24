@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Flight Request</title>
+</head>
+<body>
+    <form action="/flights" method="POST">
+        <label for="airline">Select Your Airline:
+            <select name="airline" id="airline">
+                <option value="American">American</option>
+                <option value="Delta">Delta</option>
+                <option value="Southwest">Southwest</option>
+                <option value="United">United</option>
+            </select>
+        </label>
+        <label for="airport">Choose Airport:
+            <select name="airport" id="airport">
+                <option value="ATL">ATL</option>
+                <option value="LAX">LAX</option>
+                <option value="DFW">DFW</option>
+                <option value="DEN" selected>DEN</option>
+                <option value="SAN">SAN</option>
+            </select>
+        </label>
+        <label for="departs">Choose your departure date:</label>
+            <input type="datetime-local" id="departs"
+                name="departs" value="2022-09-23T5:00"
+                min="2021-09-23T0:00" max="2023-08-29T0:00">
+        <input type="submit" value="ADD FLIGHT">
+    </form>
+</body>
+</html>
