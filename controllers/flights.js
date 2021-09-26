@@ -4,7 +4,15 @@ module.exports = {
     index,
     new: newFlight,
     create,
+    show,
 };
+
+function show(req, res) {
+    Flight.findById(req.params.id, function(err, flight) {
+        res.render('flights/show', { title: 'Flight Detail for: ', flight });
+    });
+};
+
 
 function create(req, res) {
     // change departs from a string to a date value
