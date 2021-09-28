@@ -5,7 +5,7 @@ module.exports = {
 };
 
 function create(req, res) {
-    req.body.arrival = new Date(req.body.arrival);
+    req.body.arrival = `${s.substr(5, 2)}-${s.substr(8, 2)}-${s.substr(0, 4)}`;
     req.body.airport.toUpperCase();
     console.log(req.body);
     // find the complete flight object
