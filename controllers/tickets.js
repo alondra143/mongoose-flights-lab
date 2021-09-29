@@ -13,10 +13,10 @@ function newTix(req,res) {
 
 async function create(req,res) {
     try {
-        const flightDocument = await Flight.findById(req.params.id)
-        flightDocument._id.push(req.body);
+        const flight = await Flight.findById(req.params.id)
+        flight._id.push(req.body);
         console.log(req.body);
-        res.render('tickets/new');
+        res.redirect(`flights/${flight._id}`);
     } catch(err) {
         res.send(err)
     }

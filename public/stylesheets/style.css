@@ -6,3 +6,8 @@ body {
 a {
   color: #00B7FF;
 }
+div {
+  display: grid;
+  grid-template-columns: auto auto;
+
+}
